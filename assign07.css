@@ -1,0 +1,128 @@
+body{
+    background-color: cadetblue;
+    margin: 0;
+}
+
+header{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    margin: 3rem;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: auto;
+    align-content: center;
+}
+
+p {
+    margin: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+form {
+    margin-top: 8rem;
+    margin-left: 2rem;
+
+}
+
+input{
+    width: 95%;
+    padding: 12px;
+    background-color: lightgray;
+    border: 2px solid black;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#payment {
+    background: rgb(188, 230, 188);
+    font-weight: 900;
+}
+
+#apr:focus,
+#term:focus,
+#amount:focus{
+    background-color: white;
+}
+
+
+#apr:invalid:not(:focus):not(:placeholder-shown),
+#term:invalid:not(:focus):not(:placeholder-shown),
+#amount:invalid:not(:focus):not(:placeholder-shown) {
+    background-color: pink;
+}
+
+#apr:valid,
+#term:valid,
+#amount:valid {
+    background-color: lightskyblue;
+}
+
+#apr_requirments,
+#term_requirments,
+#amount_requirments {
+    display: none;
+    color: white;
+    font-size: 20px;
+    transition: .28s;
+    font-style: italic;
+}
+
+label {
+    font-size: 2rem;
+    padding: 1rem 1rem 1rem 0;
+    display: inline-block
+}
+
+.button{
+    float: right;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+#calculate,
+#clear {
+    font-size: 1.5rem;
+    background-color: aliceblue;
+    border-radius: 12px;
+    margin: 12px;
+}
+
+#calculate:hover{
+    background-color: darkgreen;
+    color: white;
+}
+
+#clear:hover {
+    background-color: red;
+    color: white;
+}
+
+
+
+@media only screen and (min-width: 900px) {
+    body {
+        margin: 0 150px 0 150px;
+    }
+    
+    .col-1 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+    }
+
+    .col-2 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

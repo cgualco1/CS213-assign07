@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Morgage Calculator">
+    <link rel="stylesheet" href="assign07.css">
+    <script defer src="assign07.js"></script>
+    <title>Morgage Calculator</title>
+</head>
+<body>
+  <div id="main">
+    <header>
+      <h1>Mortgage Calculator</h1>
+    </header>
+
+  
+    <p>Are you looking into a long term investment? Do you feel you are ready to by your first home?<br>
+      There is a lot to consider when making this step. To help you with this please enjoy this Mortgage Calculator.
+    </p>
+    <form action="/" class="Calculator" id="form">
+      <div class="row">
+        <div class="col-1">
+          <label for="apr">APR</label>
+        </div>
+        <div class="col-2">
+          <input type="number" min="0" max="25" step="any" id="apr" name="apr" placeholder="Annual percentage Rate" >
+        </div>
+        <div class = "requirments" id="apr_requirments">Must be a value between 0 and 25</div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <label for="term">Loan Term</label>
+        </div>
+        <div class="col-2">
+          <input type="number" min="1" max="40" id="term" name="term" placeholder="Loan Term in Years">
+        </div>
+        <div class = "requirments" id="term_requirments">Must be higher than 0 but not more than 40</div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <label for="amount">Loan Amount</label>
+        </div>
+        <div class="col-2">
+          <input type="number" min="1" id="amount" name="amount" placeholder="Total Loan Amount">
+        </div>
+        <div class = "requirments" id="amount_requirments">Must be greater than 0</div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <label for="payment">Monthly Payment</label>
+        </div>
+        <div class="col-2">
+          <input type="text" disabled="disabled" id="payment" name="payment" placeholder="Your Monthly Payment Will Be">
+        </div>
+      </div>
+      <div class="button">
+        <button id="clear" type="reset" value="Reset">Reset</button>
+        <button id="calculate" type="button" onclick="paymentCalculator()">Calculate Payment</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
